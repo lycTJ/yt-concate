@@ -1,5 +1,6 @@
 from .step import Step
 
+
 class ReadCaption(Step):
     def process(self, data, inputs, utils):
         for yt in data:
@@ -22,5 +23,5 @@ class ReadCaption(Step):
                         captions[caption] = time
                         time_line = False
             yt.captions = captions
-        return  data
+        return data
 
